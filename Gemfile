@@ -35,6 +35,7 @@ group :development, :test do
     gem 'spring', '~> 1.1.0.beta2'
     gem 'spring-commands-rspec'
   end
+  gem 'rspec', '2.14.1'
   gem 'jasmine-rails', github: 'searls/jasmine-rails'
   gem 'jasmine-jquery-rails', github: 'travisjeffery/jasmine-jquery-rails'
 end
