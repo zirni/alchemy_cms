@@ -13,7 +13,8 @@ module Alchemy
 
       def update
         @essence_file = EssenceFile.find(params[:id])
-        @essence_file.update_attributes(params[:essence_file])
+        essence_params = params.require(:essence_file).permit(:title, :css_class)
+        @essence_file.update_attributes(essence_params)
       end
 
       def assign
