@@ -8,7 +8,8 @@ module Alchemy
     end
 
     let(:content)      { mock_model('Content', essence: essence_file) }
-    let(:essence_file) { mock_model('EssenceFile', :attachment= => nil) }
+    # let(:essence_file) { mock_model('EssenceFile', :attachment= => nil) }
+    let(:essence_file) { FactoryGirl.create(:essence_file) }
     let(:attachment)   { mock_model('Attachment') }
 
     describe '#edit' do
@@ -28,13 +29,12 @@ module Alchemy
     end
 
     describe '#update' do
-      before do
-        EssenceFile.stub(find: essence_file)
-      end
-
       it "should update the attributes of essence_file" do
-        essence_file.should_receive(:update_attributes).and_return(true)
-        xhr :put, :update, id: essence_file.id
+        xhr :put, :update, id: essence_file.id, essence_file: { title: "my title", css_class: "no_float" }
+
+        essence_file.reload
+        essence_file.title.should     == "my title"
+        essence_file.css_class.should == "no_float"
       end
     end
 
