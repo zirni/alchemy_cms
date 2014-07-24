@@ -11,6 +11,7 @@
 #  page_layout      :string(255)
 #  meta_keywords    :text
 #  meta_description :text
+#  link_title       :text
 #  lft              :integer
 #  rgt              :integer
 #  parent_id        :integer
@@ -50,6 +51,7 @@ module Alchemy
     PERMITTED_ATTRIBUTES = [
       :meta_description,
       :meta_keywords,
+      :link_title,
       :name,
       :page_layout,
       :public,
