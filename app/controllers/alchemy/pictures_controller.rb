@@ -4,7 +4,9 @@ module Alchemy
 
     caches_page :show, :thumbnail, :zoom
 
-    before_filter :ensure_secure_params
+    # DISABLE secure params so we can put image urls
+    # directly into content.
+    # before_filter :ensure_secure_params
 
     load_and_authorize_resource
 
