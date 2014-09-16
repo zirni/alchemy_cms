@@ -52,6 +52,8 @@ module Alchemy
       :meta_description,
       :meta_keywords,
       :link_title,
+      :breadcrumb_link_text,
+      :breadcrumb_link_title,
       :name,
       :page_layout,
       :public,
