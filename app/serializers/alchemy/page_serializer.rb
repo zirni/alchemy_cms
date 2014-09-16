@@ -11,6 +11,8 @@ module Alchemy
       :meta_keywords,
       :meta_description,
       :link_title,
+      :breadcrumb_link_text,
+      :breadcrumb_link_title,
       :tag_list,
       :created_at,
       :updated_at,

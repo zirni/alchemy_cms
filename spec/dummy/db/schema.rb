@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724141011) do
+ActiveRecord::Schema.define(version: 20140916061346) do
 
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
@@ -217,23 +217,25 @@ ActiveRecord::Schema.define(version: 20140724141011) do
     t.integer  "rgt"
     t.integer  "parent_id"
     t.integer  "depth"
-    t.boolean  "visible",          default: false
-    t.boolean  "public",           default: false
-    t.boolean  "locked",           default: false
+    t.boolean  "visible",               default: false
+    t.boolean  "public",                default: false
+    t.boolean  "locked",                default: false
     t.integer  "locked_by"
-    t.boolean  "restricted",       default: false
-    t.boolean  "robot_index",      default: true
-    t.boolean  "robot_follow",     default: true
-    t.boolean  "sitemap",          default: true
-    t.boolean  "layoutpage",       default: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.boolean  "restricted",            default: false
+    t.boolean  "robot_index",           default: true
+    t.boolean  "robot_follow",          default: true
+    t.boolean  "sitemap",               default: true
+    t.boolean  "layoutpage",            default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.integer  "language_id"
     t.text     "cached_tag_list"
     t.datetime "published_at"
     t.string   "link_title"
+    t.string   "breadcrumb_link_text"
+    t.string   "breadcrumb_link_title"
   end
 
   add_index "alchemy_pages", ["language_id"], name: "index_pages_on_language_id"
@@ -311,7 +313,5 @@ ActiveRecord::Schema.define(version: 20140724141011) do
     t.string  "name"
     t.integer "taggings_count", default: 0
   end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
 end
