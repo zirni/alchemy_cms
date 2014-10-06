@@ -12,6 +12,7 @@
 #  meta_keywords    :text
 #  meta_description :text
 #  link_title       :text
+#  head_title       :text
 #  lft              :integer
 #  rgt              :integer
 #  parent_id        :integer
@@ -54,6 +55,7 @@ module Alchemy
       :link_title,
       :breadcrumb_link_text,
       :breadcrumb_link_title,
+      :head_title,
       :name,
       :page_layout,
       :public,
