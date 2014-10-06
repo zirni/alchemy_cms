@@ -13,6 +13,7 @@ module Alchemy
       :link_title,
       :breadcrumb_link_text,
       :breadcrumb_link_title,
+      :head_title,
       :tag_list,
       :created_at,
       :updated_at,
