@@ -8,7 +8,8 @@ module Alchemy
     # directly into content.
     # before_filter :ensure_secure_params
 
-    load_and_authorize_resource
+    # load_and_authorize_resource
+    load_resource
 
     def show
       @size = params[:size]
